@@ -7,10 +7,78 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.intelwalk.babytracker.MainActivity">
+    tools:context="com.intelwalk.babytracker.MainActivity"
+    android:background="#fefefe">
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/main_notice"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentLeft="false"
+        android:textAlignment="center" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:id="@+id/button"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:onClick="sendTempInput" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diaper Change"
+        android:id="@+id/button2"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crying"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feeding"
+        android:id="@+id/button4"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breathing Monitor"
+        android:id="@+id/button5"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleeping"
+        android:id="@+id/button6"
+        android:layout_below="@+id/button5"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bathing"
+        android:id="@+id/button7"
+        android:layout_below="@+id/button6"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
