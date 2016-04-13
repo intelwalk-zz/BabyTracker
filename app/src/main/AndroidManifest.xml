@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.intelwalk.babytracker">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,16 +17,44 @@
         <activity android:name=".TemperatureInput">
             <intent-filter>
                 <action android:name="com.intelwalk.babytracker.TemperatureInput" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".DiaperInput" />
-        <activity android:name=".CryingInput" />
-        <activity android:name=".FeedingInput" />
-        <activity android:name=".BreathingMonitorInput" />
-        <activity android:name=".SleepingInput" />
-        <activity android:name=".BathingInput"></activity>
+        <activity android:name=".DiaperInput">
+            <intent-filter>
+                <action android:name="com.intelwalk.babytracker.DiaperInput" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".CryingInput" >
+            <intent-filter>
+                <action android:name="com.intelwalk.babytracker.CryingInput" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FeedingInput" >
+            <intent-filter>
+                <action android:name="com.intelwalk.babytracker.FeedingInput" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BreathingMonitorInput" >
+            <intent-filter>
+                <action android:name="com.intelwalk.babytracker.BreathingMonitorInput" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SleepingInput" >
+            <intent-filter>
+                <action android:name="com.intelwalk.babytracker.SleepingInput" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BathingInput">
+            <intent-filter>
+                <action android:name="com.intelwalk.babytracker.BathingInput" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
-
 </manifest>
