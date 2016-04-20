@@ -29,7 +29,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
     public static final String COLUMN_HAIRWASH = "hairwash";
 
     //We need to pass database information along to the superclass
-    public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory, int version){
+    public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
     }
 
@@ -58,7 +58,34 @@ public class MyDBHandler extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
     }
 
+    public void addEvent(Event event){
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_EVENTNAME, event.get_eventname());
+        values.put(COLUMN_EVENTDATE, event.get_eventdate());
+        values.put(COLUMN_EVENTTIME, event.get_eventtime());
+        values.put(COLUMN_EVENTCOMMENTS, event.get_eventcomments());
+        values.put(COLUMN_CRYINGTYPE, event.get_cryingtype());
+        values.put(COLUMN_WETDIRTYDIAPER, event.get_wetdirtydiaper());
+        values.put(COLUMN_DIAPERRASH, event.get_diaperrash());
+        values.put(COLUMN_NURSINGORFOOD, event.get_nursingorfood());
+        values.put(COLUMN_NURSINGLORR, event.get_nursinglorr());
+        values.put(COLUMN_TABLEORBABYFOOD, event.get_tableorbabyfood());
+        values.put(COLUMN_TEMPERATURETYPE, event.get_temperaturetype());
+        values.put(COLUMN_TEMPERATURENUMBER, event.get_temperaturenumber());
+        values.put(COLUMN_NAPORNIGHTSSLEEP, event.get_napornightssleep());
+        values.put(COLUMN_NAPSLEEPDURATION, event.get_napsleepduration());
+        values.put(COLUMN_HAIRWASH, event.get_hairwash());
+
+        SQLiteDatabase db = getWritableDatabase();
+        db.insert(TABLE_NAME,null,values);
+        db.close();
+    }
+
+    public void deleteEvent(Event event){
+
+    }
 }
