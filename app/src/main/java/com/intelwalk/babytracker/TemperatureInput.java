@@ -11,7 +11,7 @@ public class TemperatureInput extends AppCompatActivity {
 
     TextView temperaturenumber;
     RadioButton temperaturetype;
-    MyDBHandler dbHandler;
+    DataManager dbHandler;
     TextView output;
 
     @Override
@@ -20,7 +20,7 @@ public class TemperatureInput extends AppCompatActivity {
         setContentView(R.layout.activity_temperature_input);
         temperaturenumber = (EditText) findViewById(R.id.editText);
         output = (TextView) findViewById(R.id.textView4);
-        dbHandler = new MyDBHandler(this,null,null,1);
+        dbHandler = new DataManager(this);
         output.setText("onCreate");
     }
 
@@ -39,7 +39,7 @@ public class TemperatureInput extends AppCompatActivity {
     }
 
     public void printDatabase(){
-        String dbString = dbHandler.databaseToString();
-        output.setText(dbString);
+        //String dbString = dbHandler.databaseToString();
+        output.setText("PRINTFUNC");
     }
 }
