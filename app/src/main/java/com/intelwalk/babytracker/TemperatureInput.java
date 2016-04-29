@@ -18,13 +18,15 @@ public class TemperatureInput extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temperature_input);
-        temperaturenumber = (TextView) findViewById(R.id.textView3);
+        temperaturenumber = (EditText) findViewById(R.id.editText);
+        output = (TextView) findViewById(R.id.textView4);
         dbHandler = new MyDBHandler(this,null,null,1);
-        //output.setText("onCreate");
+        output.setText("onCreate");
     }
 
     public void addButtonClicked(View view){
-        Event event = new Event("Temperature");
+        Event event = new Event();
+        event.set_eventname("Temperature");
         event.set_temperaturenumber(temperaturenumber.getText().toString());
         //event.set_temperaturetype((temperaturetype.getText().toString()));
         dbHandler.addEvent(event);

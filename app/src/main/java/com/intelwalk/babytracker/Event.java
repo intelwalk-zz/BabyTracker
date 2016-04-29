@@ -10,7 +10,7 @@ public class Event {
     private String _cryingtype;
     private int _wetdirtydiaper;
     private int _diaperrash;
-    private int _nursingorfood;
+    private int nursingorfood;
     private int _nursinglorr;
     private int _tableorbabyfood;
     private String _temperaturetype;
@@ -21,12 +21,13 @@ public class Event {
 
     public Event(){
 
+
     }
 
-    public Event(String temperaturenumber, String temperaturetype){
+    /*public Event(String temperaturenumber, String temperaturetype){
         this._temperaturenumber = temperaturenumber;
         this._temperaturetype = temperaturetype;
-    }
+    }*/
 
     public Event(String eventname){
         this._eventname = eventname;
@@ -97,11 +98,11 @@ public class Event {
     }
 
     public int get_nursingorfood() {
-        return _nursingorfood;
+        return nursingorfood;
     }
 
     public void set_nursingorfood(int _nursingorfood) {
-        this._nursingorfood = _nursingorfood;
+        this.nursingorfood = _nursingorfood;
     }
 
     public int get_nursinglorr() {

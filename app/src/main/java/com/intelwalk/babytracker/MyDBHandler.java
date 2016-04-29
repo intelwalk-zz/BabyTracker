@@ -8,7 +8,7 @@ import android.content.ContentValues;
 
 public class MyDBHandler extends SQLiteOpenHelper{
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
     private static final String DATABASE_NAME = "eventDB.db";
     public static final String TABLE_NAME = "events";
     public static final String COLUMN_ID = "_id";
