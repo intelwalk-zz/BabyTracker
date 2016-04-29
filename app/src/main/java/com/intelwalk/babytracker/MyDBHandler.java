@@ -88,4 +88,26 @@ public class MyDBHandler extends SQLiteOpenHelper{
     public void deleteEvent(Event event){
 
     }
+
+    public String databaseToString(){
+        String dbString = "";
+        SQLiteDatabase db = getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME + " WHERE 1";
+
+        //Cursor points to a location in your results
+        Cursor c = db.rawQuery(query, null);
+        //Move to the first row in your results
+        c.moveToFirst();
+
+        //Position after the last row means the end of the results
+        while (!c.isAfterLast()) {
+            if (c.getString(c.getColumnIndex("eventname")) != null) {
+                dbString += c.getString(c.getColumnIndex("eventname"));
+                dbString += "\n";
+            }
+            c.moveToNext();
+        }
+        db.close();
+        return dbString;
+    }
 }

@@ -14,13 +14,18 @@ public class Event {
     private int _nursinglorr;
     private int _tableorbabyfood;
     private String _temperaturetype;
-    private float _temperaturenumber;
+    private String _temperaturenumber;
     private int _napornightssleep;
     private String _napsleepduration;
     private int _hairwash;
 
     public Event(){
 
+    }
+
+    public Event(String temperaturenumber, String temperaturetype){
+        this._temperaturenumber = temperaturenumber;
+        this._temperaturetype = temperaturetype;
     }
 
     public Event(String eventname){
@@ -123,11 +128,11 @@ public class Event {
         this._temperaturetype = _temperaturetype;
     }
 
-    public float get_temperaturenumber() {
+    public String get_temperaturenumber() {
         return _temperaturenumber;
     }
 
-    public void set_temperaturenumber(float _temperaturenumber) {
+    public void set_temperaturenumber(String _temperaturenumber) {
         this._temperaturenumber = _temperaturenumber;
     }
 
